@@ -1,0 +1,31 @@
+if [[ -e IRIS-Documentation ]]; then
+    echo 'exists IRIS-Documentation'
+    rm -rf IRIS-Documentation
+fi
+
+pip install -r requirements.txt
+
+git clone https://github.com/mobigen/IRIS-Documentation
+
+if [ ! -d "IRIS-Documentation" ]
+then
+    echo "IRIS-Documentation clone fail"
+    exit
+fi
+
+cd IRIS-Documentation
+./get_document
+./build_web ALL
+
+if [ ! -d "out/IRIS" ]
+then
+    echo "build fail"
+    exit
+fi
+
+
+rm -rf ../../manual
+cp -r out/IRIS ../../manual
+
+cd ..
+rm -rf IRIS-Documentation

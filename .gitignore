@@ -1,0 +1,16 @@
+*.swp
+
+Gemfile.lock
+
+doctrees/
+.buildinfo
+
+_site
+.sass-cache
+.jekyll-metadata
+
+manual_source/node_modules/
+manual_source/.cache/
+
+src/
+src/main/resources/static/images/common/.psd

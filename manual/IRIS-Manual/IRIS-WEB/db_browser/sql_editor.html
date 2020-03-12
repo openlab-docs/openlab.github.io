@@ -1,0 +1,288 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SQL 입력창 &mdash; IRIS 2.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+	<!-- Bizible Script -->
+	<!--script src="//cdn.bizible.com/scripts/bizible.js" async=""></script-->
+
+        <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48995315-4"></script>
+<script>
+    var host = window.location.hostname;
+    if(host != "localhost" && host != "127.0.0.1")
+    {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48995315-4');
+    }
+</script>
+        <!-- End Google Analytics -->
+
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> IRIS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Usecase/index.html">Usecase</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">IRIS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+    
+    <li>SQL 입력창</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          d
+          <a href="../../../_sources/IRIS-Manual/IRIS-WEB/db_browser/sql_editor.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sql">
+<h1>SQL 입력창<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h1>
+<p>SQL 입력창에서 IRIS에 실행할 쿼리 또는 dot commend를 실행할 수 있습니다.
+한 번에 여러 개의 쿼리를 실행하거나, “전체 실행” 체크 박스를 해지 후 실행하고 싶은 쿼리를 텍스트 블럭으로 선택 후 실행할 수 있습니다.
+“개발자 모드” 체크 박스의 경우, IRIS에서 로컬테이블을 대상으로 한 SELECT 쿼리를 실행할 때에는 반드시 HINT를 입력하게 되어있습니다. 그런데 HINT를 주지 않고 SQL을 실행하고 싶을 경우, 이 “개발자 모드” 체크 박스를 체크하면 HINT 구문없이 쿼리를 실행할 수 있습니다.</p>
+<img alt="../../../_images/edit1.png" src="../../../_images/edit1.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="15%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>번호</td>
+<td>구분</td>
+<td>설명</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>쿼리 입력</td>
+<td>쿼리 및 dot commend를 입력할 수 있는 입력란</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>쿼리 전체 실행 설정</td>
+<td>입력 창에 모든 쿼리를 실행할지 여부 선택할 수 있는 체크 박스</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>개발자 모드 설정</td>
+<td>쿼리에 힌트를 사용할지 여부 선택할 수 있는 체크 박스</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>쿼리 실행</td>
+<td>쿼리를 실행할 수 있는 버튼</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>쿼리 삭제</td>
+<td>입력된 모든 쿼리를 삭제할 수 있는 버튼</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, team IRIS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/myscript.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+	<header>
+	<div class="header__container">
+		<div class="search__icon">
+			<i class="fa fa-search"></i>
+		</div>
+		<a href="/" class="header__logo">
+			<img width="52" src="/assets/img/logo/iris-logo.svg">
+			<span class="header__logo-text">Documentation</span>
+		</a>
+		<div class="links__icon">
+			<i class="fa fa-bars"></i>
+		</div>
+		<ul class="header__links">
+			<li><a href="#products">제품</a></li>
+			<li><a href="#blog">블로그</a></li>
+			<li><a href="#company">회사</a></li>
+		</ul>
+		<div class="header__searchbar">
+			<form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+                <input type="text" name="q" placeholder="Search by keyword" autofocus />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+		</div>
+	</div>
+</header>
+	<script type="text/javascript">
+		/* Temporary fix for the search capability. Fix has been committed to the theme's master;
+		   however, waiting a new release to the theme.  This fix should remain in place until that
+		   time.  sphinx_rtd_theme is current v0.1.10a0. Commit for the fix in the
+		   theme can be found at: https://github.com/snide/sphinx_rtd_theme/commit/a5e0e304
+		 */
+        if(DOCUMENTATION_OPTIONS) {
+			DOCUMENTATION_OPTIONS.SOURCELINK_SUFFIX = '.txt'
+        }
+    </script>
+
+
+</body>
+</html>

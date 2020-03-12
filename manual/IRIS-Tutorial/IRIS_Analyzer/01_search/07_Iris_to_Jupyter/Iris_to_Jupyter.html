@@ -1,0 +1,382 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>‘검색’ 결과를 Jupyter 데이터로 추가하기 &mdash; IRIS 2.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="‘검색’ 결과를 RStudio 데이터로 추가하기" href="../08_Iris_to_Rstudio/Iris_to_Rstudio.html" />
+    <link rel="prev" title="검색 결과를 파일로 내보내기" href="../06_search_Export/search_Export.html" />
+	<!-- Bizible Script -->
+	<!--script src="//cdn.bizible.com/scripts/bizible.js" async=""></script-->
+
+        <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48995315-4"></script>
+<script>
+    var host = window.location.hostname;
+    if(host != "localhost" && host != "127.0.0.1")
+    {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48995315-4');
+    }
+</script>
+        <!-- End Google Analytics -->
+
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> IRIS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Tutorial</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">IRIS Analyzer</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">검색</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../01_search_by_cond/search_by_cond.html">조건에 맞는 데이터 검색</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02_stats_in_search/stats_in_search.html">데이터의 기초 통계 분석</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03_search_closeup/search_closeup.html">타임라인 그래프에서 특정 구간 선택하여 검색</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04_search_Sampling/search_Sampling.html">데이터 샘플링</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../05_search_ToAnother/search_ToAnother.html">검색 결과로 다른 화면에서 작업</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06_search_Export/search_Export.html">검색 결과를 파일로 내보내기</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">‘검색’ 결과를 Jupyter 데이터로 추가하기</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08_Iris_to_Rstudio/Iris_to_Rstudio.html">‘검색’ 결과를 RStudio 데이터로 추가하기</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pivot/index.html">피벗분석</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_visualization/index.html">시각화</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../05_ia/index.html">대화형 분석</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../IRIS_Studio/index.html">IRIS Studio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../IRIS-Manual/index.html">Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../IRIS-Usecase/index.html">Usecase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../IRIS-FAQ/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">IRIS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="../../../index.html">Tutorial</a> &raquo;</li>
+    
+      <li><a href="../../index.html">IRIS Analyzer</a> &raquo;</li>
+    
+      <li><a href="../index.html">검색</a> &raquo;</li>
+    
+    <li>‘검색’ 결과를 Jupyter 데이터로 추가하기</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          d
+          <a href="../../../../_sources/IRIS-Tutorial/IRIS_Analyzer/01_search/07_Iris_to_Jupyter/Iris_to_Jupyter.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jupyter">
+<h1>‘검색’ 결과를 Jupyter 데이터로 추가하기<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>개요<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">본 문서는 [검색] 메뉴에서 조회한 데이터 모델을 Jupyter Notebook으로 추가하는 기능의 사용 방법을 기술하고 있습니다.</div>
+</div>
+</div>
+<div class="section" id="iris">
+<h2>IRIS 데이터 검색<a class="headerlink" href="#iris" title="Permalink to this headline">¶</a></h2>
+<p>[데이터 브라우저] &gt; [검색] 기능을 통해 Jupyter Notebook으로 전달할 데이터 테이블을 검색합니다.</p>
+<img alt="IRIS검색화면" src="../../../../_images/001.data_search.png" />
+</div>
+<div class="section" id="python">
+<h2>Python 코드 복사<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>검색 바 오른쪽 [분석코드복사] 아이콘을 클릭합니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/002.code_copy.png"><img alt="python분석코드복사" src="../../../../_images/002.code_copy.png" style="width: 486.90000000000003px; height: 201.6px;" /></a>
+<p>[Python 코드 복사하기] 항목을 클릭하여 Python코드를 클립보드에 복사합니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/003.python_code_copy.png"><img alt="python코드복사" src="../../../../_images/003.python_code_copy.png" style="width: 441.0px; height: 313.2px;" /></a>
+<p>해당 테이블을 Jupyter Notebook에서 로딩할 수 있는 코드가 클립보드에 복사되었습니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/004.clipboard_copy_msg.png"><img alt="클립보드복사" src="../../../../_images/004.clipboard_copy_msg.png" style="width: 819.0px; height: 453.6px;" /></a>
+</div>
+<div class="section" id="jupyter-notebook">
+<h2>Jupyter Notebook 이동<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>대화형분석 &gt; Jupyter 를 클릭하여 IRIS에서 제공하는 Python 사용 환경으로 이동합니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/005.to_jupyter.png"><img alt="Jupyter이동" src="../../../../_images/005.to_jupyter.png" style="width: 1115.1000000000001px; height: 598.5px;" /></a>
+<p>Jupyter Notebook 오른쪽 상단 New 버튼을 클릭하여 새 Notebook 파일을 생성합니다.
+필요시 새로운 폴더를 생성할 수 있습니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/006.jupyter_main.png"><img alt="python스크립트생성" src="../../../../_images/006.jupyter_main.png" style="width: 1172.7px; height: 342.90000000000003px;" /></a>
+</div>
+<div class="section" id="python2-7">
+<h2>Python2.7 버전 실행 시<a class="headerlink" href="#python2-7" title="Permalink to this headline">¶</a></h2>
+<p>새 스크립트 창에 복사-붙여넣기 또는 Ctrl + V 하여 클립보드에 복사된 코드를 삽입합니다.
+복사된 코드에는 IRIS 연결 정보 및 테이블 로딩에 관련한 쿼리가 기 작성되어 있습니다.</p>
+<div class="section" id="id2">
+<h3>IRIS 로그인 비밀번호 입력<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>코드 내 user_passwd 변수의 따옴표(‘’) 사이에 IRIS 로그인 비밀번호를 작성합니다.</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user_id</span> <span class="o">=</span> <span class="s2">&quot;manual&quot;</span>
+<span class="n">user_passwd</span> <span class="o">=</span> <span class="s2">&quot;계정 비밀번호 입력&quot;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../../_images/007.enter_password.png"><img alt="패스워드입력" src="../../../../_images/007.enter_password.png" style="width: 990.9px; height: 477.90000000000003px;" /></a>
+</div>
+<div class="section" id="id3">
+<h3>코드 실행하여 결과 확인<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Navigation Bar의 Run 버튼을 클릭하거나 Ctrl + Enter 하여 전체 코드를 실행합니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/008.run_code.png"><img alt="코드실행" src="../../../../_images/008.run_code.png" style="width: 645.3000000000001px; height: 52.2px;" /></a>
+</div>
+<div class="section" id="id4">
+<h3>테이블 결과 확인<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>코드 하단의 결과 창에서 로딩된 테이블 값을 확인할 수 있습니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/009.show_result.png"><img alt="테이블내용확인" src="../../../../_images/009.show_result.png" style="width: 736.8px; height: 365.4px;" /></a>
+</div>
+</div>
+<div class="section" id="python3-6">
+<h2>Python3.6 버전 실행 시<a class="headerlink" href="#python3-6" title="Permalink to this headline">¶</a></h2>
+<p>새 스크립트 창에 복사-붙여넣기 또는 Ctrl + V 하여 클립보드에 복사된 코드를 삽입합니다.
+복사된 코드에는 IRIS 연결 정보 및 테이블 로딩에 관련한 쿼리가 기 작성되어 있습니다.</p>
+<p>복사된 코드는 Python2.7 버전이므로 Python3.6 버전에서 실행 시 일부 코드 수정이 필요합니다.</p>
+<ol class="arabic simple">
+<li>Python3.6버전에서 “httplib”를 “http.client”로 변경합니다.</li>
+</ol>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">http.client</span> <span class="k">import</span> <span class="n">HTTPConnection</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../../_images/010.chg_pkg_name.png"><img alt="패키지이름변경" src="../../../../_images/010.chg_pkg_name.png" style="width: 508.5px; height: 162.9px;" /></a>
+<ol class="arabic simple" start="2">
+<li>try…exception 문의 “except Exception, e” 를 “except Excetpion as e”로 변경합니다.</li>
+</ol>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">:</span>
+    <span class="n">sid</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;sid&quot;</span><span class="p">]</span>
+<span class="k">except</span> <span class="n">Excetpion</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../../_images/011.chg_exception.png"><img alt="예외문변경" src="../../../../_images/011.chg_exception.png" style="width: 392.40000000000003px; height: 163.8px;" /></a>
+<ol class="arabic simple" start="3">
+<li>하단 print 문의 내용을 괄호로 감싸줍니다.</li>
+</ol>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../../_images/012.chg_print.png"><img alt="프린트문변경" src="../../../../_images/012.chg_print.png" style="width: 429.3px; height: 101.7px;" /></a>
+<div class="section" id="id5">
+<h3>코드 실행하여 결과 확인<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Navigation Bar의 Run 버튼을 클릭하거나 Ctrl + Enter 하여 전체 코드를 실행합니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/008.run_code.png"><img alt="코드실행" src="../../../../_images/008.run_code.png" style="width: 645.3000000000001px; height: 52.2px;" /></a>
+</div>
+<div class="section" id="id6">
+<h3>테이블 결과 확인<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>코드 하단의 결과 창에서 로딩된 테이블 값을 확인할 수 있습니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/009.show_result.png"><img alt="테이블내용확인" src="../../../../_images/009.show_result.png" style="width: 736.8px; height: 365.4px;" /></a>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../08_Iris_to_Rstudio/Iris_to_Rstudio.html" class="btn btn-neutral float-right" title="‘검색’ 결과를 RStudio 데이터로 추가하기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../06_search_Export/search_Export.html" class="btn btn-neutral" title="검색 결과를 파일로 내보내기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, team IRIS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/myscript.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+	<header>
+	<div class="header__container">
+		<div class="search__icon">
+			<i class="fa fa-search"></i>
+		</div>
+		<a href="/" class="header__logo">
+			<img width="52" src="/assets/img/logo/iris-logo.svg">
+			<span class="header__logo-text">Documentation</span>
+		</a>
+		<div class="links__icon">
+			<i class="fa fa-bars"></i>
+		</div>
+		<ul class="header__links">
+			<li><a href="#products">제품</a></li>
+			<li><a href="#blog">블로그</a></li>
+			<li><a href="#company">회사</a></li>
+		</ul>
+		<div class="header__searchbar">
+			<form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+                <input type="text" name="q" placeholder="Search by keyword" autofocus />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+		</div>
+	</div>
+</header>
+	<script type="text/javascript">
+		/* Temporary fix for the search capability. Fix has been committed to the theme's master;
+		   however, waiting a new release to the theme.  This fix should remain in place until that
+		   time.  sphinx_rtd_theme is current v0.1.10a0. Commit for the fix in the
+		   theme can be found at: https://github.com/snide/sphinx_rtd_theme/commit/a5e0e304
+		 */
+        if(DOCUMENTATION_OPTIONS) {
+			DOCUMENTATION_OPTIONS.SOURCELINK_SUFFIX = '.txt'
+        }
+    </script>
+
+
+</body>
+</html>

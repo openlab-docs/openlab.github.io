@@ -1,0 +1,870 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>generalizedLinearRegression &mdash; IRIS 2.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="linearRegression" href="linearregression.html" />
+    <link rel="prev" title="Spark Kmeans" href="SparkKmeans.html" />
+	<!-- Bizible Script -->
+	<!--script src="//cdn.bizible.com/scripts/bizible.js" async=""></script-->
+
+        <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48995315-4"></script>
+<script>
+    var host = window.location.hostname;
+    if(host != "localhost" && host != "127.0.0.1")
+    {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48995315-4');
+    }
+</script>
+        <!-- End Google Analytics -->
+
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> IRIS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../IRIS-Tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../IRIS-Common/index.html">IRIS 공통기능</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../IRIS-Studio/index.html">IRIS Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../IRIS-Analyzer/index.html">IRIS Analyzer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">IRIS Discovery Service</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture/index.html">Architecture</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Command References</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../ade.html">ade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../adv.html">adv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../anomalies.html">anomalies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../bimatrix.html">bimatrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../correlation.html">correlation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../count.html">count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fields.html">fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fillna.html">fillna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fit.html">fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fit_predict.html">fit_predict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forecasts.html">forecasts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geoip.html">geoip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geomap.html">geomap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geostats.html">geostats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hdfs.html">hdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../head.html">head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indexer.html">indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../iris.html">iris</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../join.html">join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kmeans.html">kmeans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../metatron.html">metatron</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RandomForestClassification.html">RandomForest Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RandomForestRegression.html">RandomForest Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SparkDecisionTreeClassification.html">Spark DecisionTree Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SparkDecisionTreeRegression.html">Spark DecisionTree Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SparkFPGrowth.html">Spark FP-Growth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SparkKmeans.html">Spark Kmeans</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">generalizedLinearRegression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linearregression.html">linearRegression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logisticregression.html">logisticRegression(LBFGS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mlmodel.html">mlmodel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model.html">model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model-stats.html">model-stats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model-statsdetails.html">model-statsdetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model-timeline.html">model-timeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modeldata.html">modeldata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../outlier.html">outliers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pivot.html">pivot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../predict.html">predict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pylambda.html">pylambda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rename.html">rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../round.html">round</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sampling.html">sampling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scaler.html">scaler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../search.html">search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sort.html">sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sql.html">sql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../stats.html">stats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../substr.html">substr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../timeline.html">timeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tokenizer.html">tokenizer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../top.html">top</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../union.html">union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../weekend.html">weekend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../where.html">where</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ysort.html">ysort</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../command_develop/index.html">명령어 개발 가이드</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../restapi/index.html">RESTful API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../IRIS-Database/index.html">IRIS Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../IRIS-Usecase/index.html">Usecase</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">IRIS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="../../../../index.html">Manual</a> &raquo;</li>
+    
+      <li><a href="../../../index.html">IRIS Discovery Service</a> &raquo;</li>
+    
+      <li><a href="../../index.html">Command References</a> &raquo;</li>
+    
+    <li>generalizedLinearRegression</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          d
+          <a href="../../../../../_sources/IRIS-Manual/IRIS-Discovery-Middleware/command/commands/ml_algorithms/generalizedlinearregression.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="generalizedlinearregression">
+<h1>generalizedLinearRegression<a class="headerlink" href="#generalizedlinearregression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>개요<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Linaer Regression에서 각각의 column에 대한 중요도를 뽑아내지 못 하여 해당 알고리즘을 추가 했습니다.</p>
+</div>
+<div class="section" id="id2">
+<h2>설명<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>비 정규 분포를 따르는 응답에 적용하기 위해 일반화 선형 모델(generalized linear regression)을 사용합니다.
+family 분포도는 사용자가 스스로 결정해야합니다.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>집값에 대한 샘플데이터 입니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">indus</th>
+<th class="head">rm</th>
+<th class="head">dis</th>
+<th class="head">tax</th>
+<th class="head">lstat</th>
+<th class="head">medv</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2.309999943</td>
+<td>6.574999809</td>
+<td>4.090000153</td>
+<td>296</td>
+<td>4.980000019</td>
+<td>24</td>
+</tr>
+<tr class="row-odd"><td>7.070000172</td>
+<td>6.421000004</td>
+<td>4.967100143</td>
+<td>242</td>
+<td>9.140000343</td>
+<td>21.60000038</td>
+</tr>
+<tr class="row-even"><td>7.070000172</td>
+<td>7.184999943</td>
+<td>4.967100143</td>
+<td>242</td>
+<td>4.03000021</td>
+<td>34.70000076</td>
+</tr>
+<tr class="row-odd"><td>2.180000067</td>
+<td>6.998000145</td>
+<td>6.062200069</td>
+<td>222</td>
+<td>2.940000057</td>
+<td>33.40000153</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">속성</th>
+<th class="head">설명</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CRIM</td>
+<td>마을별 범죄율</td>
+</tr>
+<tr class="row-odd"><td>ZN</td>
+<td>주거지의 비율</td>
+</tr>
+<tr class="row-even"><td>INDUS</td>
+<td>공업 지의 비율</td>
+</tr>
+<tr class="row-odd"><td>CHAS</td>
+<td>강변 위치 여부</td>
+</tr>
+<tr class="row-even"><td>NOX</td>
+<td>대기 중 질소 산화물 농도</td>
+</tr>
+<tr class="row-odd"><td>RM</td>
+<td>가구당 방의 개수</td>
+</tr>
+<tr class="row-even"><td>AGE</td>
+<td>1940년 전에 지어진 집의 비율</td>
+</tr>
+<tr class="row-odd"><td>DIS</td>
+<td>일터와의 평균 거리</td>
+</tr>
+<tr class="row-even"><td>RAD</td>
+<td>고속도로 접근성</td>
+</tr>
+<tr class="row-odd"><td>TAX</td>
+<td>재산세율</td>
+</tr>
+<tr class="row-even"><td>PTRATIO</td>
+<td>마을 별 학생-교사 비율</td>
+</tr>
+<tr class="row-odd"><td>B</td>
+<td>흑인 주거 비율</td>
+</tr>
+<tr class="row-even"><td>LSTAT</td>
+<td>저소득층 주거 비율</td>
+</tr>
+<tr class="row-odd"><td>MEDV</td>
+<td>집값 중간값</td>
+</tr>
+</tbody>
+</table>
+<p>fit으로 generalized linear regression 적용해 분류 하는 모델을 생성하는 명령어 예제입니다.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* | fit GeneralizedLinearRegression FEATURES rm,tax,indus,lstat,dis LABEL medv maxIter=100 regParam=0.1 fitIntercept=True solver=irls INTO modelB
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">features</th>
+<th class="head">estimate</th>
+<th class="head">coefficientStandardErrors</th>
+<th class="head">tValues</th>
+<th class="head">pValues</th>
+<th class="head">space</th>
+<th class="head">dispersion</th>
+<th class="head">rmse</th>
+<th class="head">r2</th>
+<th class="head">mae</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>intercept</td>
+<td>8.3766</td>
+<td>3.431</td>
+<td>2.4415</td>
+<td>0.015</td>
+<td><div class="first last line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td>28.2425</td>
+<td>5.2828</td>
+<td>0.6694</td>
+<td>3.7289</td>
+</tr>
+<tr class="row-odd"><td>rm</td>
+<td>4.7425</td>
+<td>0.432</td>
+<td>10.9786</td>
+<td>0</td>
+<td><div class="first last line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td>tax</td>
+<td>-0.0078</td>
+<td>0.002</td>
+<td>-3.8132</td>
+<td>0.0002</td>
+<td><div class="first last line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td>indus</td>
+<td>-0.1239</td>
+<td>0.0612</td>
+<td>-2.0267</td>
+<td>0.0432</td>
+<td><div class="first last line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td>lstat</td>
+<td>-0.6136</td>
+<td>0.0499</td>
+<td>-12.29</td>
+<td>0</td>
+<td><div class="first last line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td>dis</td>
+<td>-0.8767</td>
+<td>0.161</td>
+<td>-5.4454</td>
+<td>0</td>
+<td><div class="first last line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>predict로 modelB에 샘플 데이터를 다시 넣어 예측하는 명령어 예제입니다.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* | predict modelB rm,tax,indus,lstat,dis
+</pre></div>
+</div>
+<p>fit_predict로 generalized linear regression 적용해 분류 하는 모델을 생성하고 예측하는 명령어 예제입니다.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* | fit_predict GeneralizedLinearRegression FEATURES rm,tax,indus,lstat,dis LABEL medv maxIter=100 regParam=0.1 fitIntercept=True solver=irls INTO modelB
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">indus</th>
+<th class="head">rm</th>
+<th class="head">dis</th>
+<th class="head">tax</th>
+<th class="head">lstat</th>
+<th class="head">medv</th>
+<th class="head">prediction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2.309999943</td>
+<td>6.574999809</td>
+<td>4.090000153</td>
+<td>296</td>
+<td>4.980000019</td>
+<td>24</td>
+<td>30.327170453</td>
+</tr>
+<tr class="row-odd"><td>7.070000172</td>
+<td>6.421000004</td>
+<td>4.967100143</td>
+<td>242</td>
+<td>9.140000343</td>
+<td>21.60000038</td>
+<td>26.105575673</td>
+</tr>
+<tr class="row-even"><td>7.070000172</td>
+<td>7.184999943</td>
+<td>4.967100143</td>
+<td>242</td>
+<td>4.03000021</td>
+<td>34.70000076</td>
+<td>32.864401681</td>
+</tr>
+<tr class="row-odd"><td>2.180000067</td>
+<td>6.998000145</td>
+<td>6.062200069</td>
+<td>222</td>
+<td>2.940000057</td>
+<td>33.40000153</td>
+<td>34.881037647</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SparkGeneralizedLinearRegression_command : FEATURES fields LABEL l_field params INTO_model
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">이름</th>
+<th class="head">설명</th>
+<th class="head">필수/옵션</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FEATURES fields</td>
+<td>학습에 사용될 특징 column을 입력 받습니다.</td>
+<td>필수</td>
+</tr>
+<tr class="row-odd"><td>LABEL l_fiedls</td>
+<td>학습에 사용될 라벨 column을 입력 받습니다.</td>
+<td>필수</td>
+</tr>
+<tr class="row-even"><td>params</td>
+<td><a href="#id3"><span class="problematic" id="id4">*</span></a>알고리즘 옵션을 지정해줍니다.</td>
+<td>필수</td>
+</tr>
+<tr class="row-odd"><td>INTO_model</td>
+<td>모델을 저장해주는 예약어 입니다. <span class="raw-html-m2r"><br /></span>경로 (<strong>/B-IRIS/USERS/dani/ML/</strong>)에 모델, 모델 메타 데이터가 저장됩니다.<span class="raw-html-m2r"><br /></span>예 : into modelA</td>
+<td>옵션</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id5"><span class="problematic" id="id6">*</span></a>알고리즘 옵션</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">이름</th>
+<th class="head">설명</th>
+<th class="head">기본값</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>maxIter</td>
+<td>학습 반복 수</td>
+<td>100</td>
+</tr>
+<tr class="row-odd"><td>regParam</td>
+<td>정규화 계수 값</td>
+<td>0.0</td>
+</tr>
+<tr class="row-even"><td>fitintercept</td>
+<td>훈련 데이터에 대한 증간된 표현을 사용할지 안 할지 정해주는 Boolean (편향을 학습에 사용할지 안 할지)</td>
+<td>True</td>
+</tr>
+<tr class="row-odd"><td>tol</td>
+<td>최적화 함수에 대한 반복 수렴 오차 값.</td>
+<td>1e-06</td>
+</tr>
+<tr class="row-even"><td>solver</td>
+<td>최적화 알고리즘을 정합니다.</td>
+<td>irls</td>
+</tr>
+<tr class="row-odd"><td>family</td>
+<td>모델에 사용되는 오류 분포 (gaussian, binomial, poisson, gamma and tweedie)</td>
+<td>gaussian</td>
+</tr>
+<tr class="row-even"><td>link</td>
+<td>선형적인 예측과 분포 함수의 평균사이의 관계를 제공해주는 함수 (identity, log, inverse, logic, probit, cloglog, sort)</td>
+<td>identity</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="parameters-bnf">
+<h2>Parameters BNF<a class="headerlink" href="#parameters-bnf" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SparkGeneralizedLinearRegression_command : FEATURES fields LABEL l_field params INTO_model
+fields : field
+       | fields COMMA field
+field : WORD
+      | TIMES
+      | MINUS WORD
+l_field : WORD
+params : param
+       | params param
+       |
+param : WORD EQUALS WORD
+      | WORD EQUALS DOUBLE
+      | WORD EQUALS LBRACKET words RBRACKET
+      | WORD EQUALS LBRACKET doubles RBRACKET
+words : WORD
+      | words COMMA WORD
+doubles : DOUBLE
+        | doubles COMMA DOUBLE
+INTO_model : INTO WORD
+           |
+
+WORD = \w+
+COMMA = \,
+FEATURES = FEATURES | features
+LABEL = LABEL | label
+INTO = INTO
+EQUALS = \=
+TIMES = \*
+MINUS = -
+LBRACKET = \[
+RBRACKET = \]
+DOUBLE = [-+]?[0-9]+(\.([0-9]+)?([eE][-+]?[0-9]+)?|[eE][-+]?[0-9]+)
+</pre></div>
+</div>
+</div>
+<div class="section" id="problems">
+<h2>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">구현 문제인지, 다른 문제인지 확인 불가</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>File&quot;/Users/jungjunhwang/Desktop/work/code/fit_work/SparkGenerlizedLinearRegression.py&quot;, line 245, in modeling eval_dict[&#39;pValues&#39;] = summary.pValues
+
+File &quot;/Users/jungjunhwang/spark-2.2.0-bin hadoop2.7/python/pyspark/ml/regression.py&quot;, line 1719, in pValues
+    return self._call_java(&quot;pValues&quot;)
+
+IllegalArgumentException: u&#39;requirement failed: degreesOfFreedom must be positive, but got -4.0&#39;
+</pre></div>
+</div>
+<p>로컬 테스트시 column의 갯수 혹은 column들의 관계에 따라 pValue 값을 계산하지 못함.</p>
+<p>Data-Discovery-Service 서버 테스트 시 정상작동 그러나, 값이 정확한지 확인 불가.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;angora Test Command&gt;
+... | fit SparkGeneralizedLinearRegression features * LABEL medv maxIter=100 INTO modelD
+</pre></div>
+</div>
+</li>
+<li><p class="first">값이 정확한지 확인 불가.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;angora Test Command&gt;
+... | fit SparkGeneralizedLinearRegression FEATURES rm,tax,indus,lstat,crim,age,b,rad LABEL medv maxIter=100 regParam=0.1 fitIntercept=True INTO modelD
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Data-Discovery-Service_TEST</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Coeffiecient</th>
+<th class="head">estimate</th>
+<th class="head">standError</th>
+<th class="head">tValues</th>
+<th class="head">pValues</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>intercept</td>
+<td>-3.3659</td>
+<td>0.4538</td>
+<td>11.2661</td>
+<td>0.0</td>
+</tr>
+<tr class="row-odd"><td>rm</td>
+<td>5.1128</td>
+<td>0.0041</td>
+<td>-3.5127</td>
+<td>0.0005</td>
+</tr>
+<tr class="row-even"><td>tax</td>
+<td>-0.0144</td>
+<td>0.0604</td>
+<td>0.7848</td>
+<td>0.433</td>
+</tr>
+<tr class="row-odd"><td>indus</td>
+<td>0.0474</td>
+<td>0.057</td>
+<td>-9.8506</td>
+<td>0.0</td>
+</tr>
+<tr class="row-even"><td>lstat</td>
+<td>-0.5619</td>
+<td>0.0368</td>
+<td>-1.9531</td>
+<td>0.0514</td>
+</tr>
+<tr class="row-odd"><td>crim</td>
+<td>-0.0719</td>
+<td>0.0123</td>
+<td>1.3831</td>
+<td>0.1673</td>
+</tr>
+<tr class="row-even"><td>age</td>
+<td>0.017</td>
+<td>0.003</td>
+<td>3.1231</td>
+<td>0.0019</td>
+</tr>
+<tr class="row-odd"><td>b</td>
+<td>0.0094</td>
+<td>0.0717</td>
+<td>2.8293</td>
+<td>0.0049</td>
+</tr>
+<tr class="row-even"><td>rad</td>
+<td>0.2028</td>
+<td>3.6905</td>
+<td>-0.9121</td>
+<td>0.3622</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="linearregression.html" class="btn btn-neutral float-right" title="linearRegression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="SparkKmeans.html" class="btn btn-neutral" title="Spark Kmeans" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, team IRIS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/myscript.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+	<header>
+	<div class="header__container">
+		<div class="search__icon">
+			<i class="fa fa-search"></i>
+		</div>
+		<a href="/" class="header__logo">
+			<img width="52" src="/assets/img/logo/iris-logo.svg">
+			<span class="header__logo-text">Documentation</span>
+		</a>
+		<div class="links__icon">
+			<i class="fa fa-bars"></i>
+		</div>
+		<ul class="header__links">
+			<li><a href="#products">제품</a></li>
+			<li><a href="#blog">블로그</a></li>
+			<li><a href="#company">회사</a></li>
+		</ul>
+		<div class="header__searchbar">
+			<form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+                <input type="text" name="q" placeholder="Search by keyword" autofocus />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+		</div>
+	</div>
+</header>
+	<script type="text/javascript">
+		/* Temporary fix for the search capability. Fix has been committed to the theme's master;
+		   however, waiting a new release to the theme.  This fix should remain in place until that
+		   time.  sphinx_rtd_theme is current v0.1.10a0. Commit for the fix in the
+		   theme can be found at: https://github.com/snide/sphinx_rtd_theme/commit/a5e0e304
+		 */
+        if(DOCUMENTATION_OPTIONS) {
+			DOCUMENTATION_OPTIONS.SOURCELINK_SUFFIX = '.txt'
+        }
+    </script>
+
+
+</body>
+</html>

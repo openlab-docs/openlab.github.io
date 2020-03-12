@@ -1,0 +1,121 @@
+@import '../mixins/import-once';
+
+@mixin typography {
+  // really big
+  .type-giga {
+    @include typescale('giga');
+    // @include reset;
+    @include line-height('heading');
+    font-weight: 400;
+  }
+
+  .type-mega {
+    @include typescale('mega');
+    // @include reset;
+    @include line-height('heading');
+    font-weight: 400;
+  }
+
+  // really small
+  .type-omega {
+    @include typescale('omega');
+    // @include reset;
+    @include line-height('heading');
+    font-weight: 600;
+  }
+
+  .type-caption {
+    @include typescale('caption');
+    // @include reset;
+    @include line-height('body');
+    font-weight: 400;
+  }
+
+  .type-legal {
+    @include typescale('legal');
+    // @include reset;
+    @include line-height('body');
+    font-weight: 400;
+  }
+
+  .type-caps {
+    text-transform: uppercase;
+  }
+
+  strong,
+  .type-strong {
+    // @include reset;
+    font-weight: 700;
+  }
+
+  p {
+    // @include reset;
+    @include typescale('p');
+    @include line-height('body');
+    font-weight: 400;
+  }
+
+  em {
+    // @include reset;
+    font-style: italic;
+  }
+
+  a {
+    // @include reset;
+    color: $brand-color;
+  }
+
+  h1,
+  .type-alpha {
+    // @include reset;
+    @include typescale('alpha');
+    @include line-height('heading');
+    font-weight: 400;
+  }
+
+  h2,
+  .type-beta {
+    // @include reset;
+    @include typescale('beta');
+    @include line-height('heading');
+    font-weight: 400;
+  }
+
+  h3,
+  .type-gamma {
+    // @include reset;
+    @include typescale('gamma');
+    @include line-height('heading');
+    font-weight: 400;
+  }
+
+  h4,
+  .type-delta {
+    // @include reset;
+    @include typescale('delta');
+    @include line-height('heading');
+    font-weight: 600;
+  }
+
+  h5,
+  .type-epsilon {
+    // @include reset;
+    @include typescale('epsilon');
+    @include line-height('heading');
+    font-weight: 600;
+  }
+
+  h6,
+  .type-zeta {
+    // @include reset;
+    @include typescale('zeta');
+    @include line-height('heading');
+    font-weight: 600;
+  }
+}
+
+@include exports('css--typography') {
+  @if global-variable-exists('css--typography') == false or $css--typography == true {
+    @include typography;
+  }
+}

@@ -1,0 +1,1115 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command References &mdash; IRIS 2.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ade" href="commands/ade.html" />
+    <link rel="prev" title="Architecture" href="../architecture/index.html" />
+	<!-- Bizible Script -->
+	<!--script src="//cdn.bizible.com/scripts/bizible.js" async=""></script-->
+
+        <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48995315-4"></script>
+<script>
+    var host = window.location.hostname;
+    if(host != "localhost" && host != "127.0.0.1")
+    {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48995315-4');
+    }
+</script>
+        <!-- End Google Analytics -->
+
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> IRIS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../IRIS-Common/index.html">IRIS 공통기능</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../IRIS-Studio/index.html">IRIS Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../IRIS-Analyzer/index.html">IRIS Analyzer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">IRIS Discovery Service</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../architecture/index.html">Architecture</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Command References</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="commands/ade.html">ade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/adv.html">adv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/anomalies.html">anomalies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/bimatrix.html">bimatrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/correlation.html">correlation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/count.html">count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/fields.html">fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/fillna.html">fillna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/fit.html">fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/fit_predict.html">fit_predict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/forecasts.html">forecasts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/geoip.html">geoip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/geomap.html">geomap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/geostats.html">geostats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/hdfs.html">hdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/head.html">head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html">indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/iris.html">iris</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/join.html">join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/kmeans.html">kmeans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/metatron.html">metatron</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html">RandomForest Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html">RandomForest Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html">Spark DecisionTree Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html">Spark DecisionTree Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html">Spark FP-Growth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html">Spark Kmeans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html">generalizedLinearRegression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/linearregression.html">linearRegression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html">logisticRegression(LBFGS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/mlmodel.html">mlmodel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/model.html">model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/model-stats.html">model-stats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/model-statsdetails.html">model-statsdetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/model-timeline.html">model-timeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/modeldata.html">modeldata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/outlier.html">outliers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/pivot.html">pivot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/predict.html">predict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/pylambda.html">pylambda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/rename.html">rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/round.html">round</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/sampling.html">sampling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/scaler.html">scaler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/search.html">search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/sort.html">sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/sql.html">sql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/stats.html">stats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/substr.html">substr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/timeline.html">timeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/tokenizer.html">tokenizer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/top.html">top</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/union.html">union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/weekend.html">weekend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/where.html">where</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ysort.html">ysort</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../command_develop/index.html">명령어 개발 가이드</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../restapi/index.html">RESTful API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../IRIS-Database/index.html">IRIS Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Usecase/index.html">Usecase</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">IRIS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="../../index.html">Manual</a> &raquo;</li>
+    
+      <li><a href="../index.html">IRIS Discovery Service</a> &raquo;</li>
+    
+    <li>Command References</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          d
+          <a href="../../../_sources/IRIS-Manual/IRIS-Discovery-Middleware/command/index.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-references">
+<h1>Command References<a class="headerlink" href="#command-references" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="17%" />
+<col width="67%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+<th class="head">Category</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="commands/ade">ade</a></td>
+<td>Anomaly Detection Engine(ADE) 이상 탐지를 하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/adv">adv</a></td>
+<td>테이블의 각종 통계 정보를 구하거나 pivoting 할 수 있습니다. 고급시각화 화면에 사용되는 명령어 모음입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/anomalies">anomalies</a></td>
+<td>주어진 input 데이터에서 일반적인 범위를 벗어난 비정상적인 값을 찾아내는 기능입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/bimatrix">bimatrix</a></td>
+<td>bimatrix에 쓰기를 하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/correlation">correlation</a></td>
+<td>correlation을 진행하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/count">count</a></td>
+<td>입력의 래코드 건수를 계산합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/fields">fields</a></td>
+<td>검색 결과가 출력 될 field를 설정합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/fillna">fillna</a></td>
+<td>이 명령어는 특정한 필드의 결측치 처리에 사용합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/fit">fit</a></td>
+<td>이 명령어는 해당 데이터를 선택한 알고리즘으로 기계학습 모델을 만들어줍니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/fit_predict">fit_predict</a></td>
+<td>이 명령어는 해당 데이터를 선택한 알고리즘으로 기계학습 모델에 TEST set을 넣은 값을 출력합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/forecasts">forecasts</a></td>
+<td>주어진 데이터의 미래 시점 데이터를 예측합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/geoip">geoip</a></td>
+<td>이 명령어는 ip가 포함된 필드를 기반으로 위, 경도 등의 추가정보를 제공합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/geomap">geomap</a></td>
+<td>이 명령어는 업로드 되어있는 컬렉션을 기반으로 사용자가 요청하는 테이블에 지역 경계(geometry) 정보를 제공합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/geostats">geostats</a></td>
+<td>이 명령어는 위, 경도 데이터를 포함한 두 개의 필드를 기반으로 그룹(지정 지역 클러스터)별 통계정보를 제공합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/hdfs">hdfs</a></td>
+<td>HDFS에 읽기 및 쓰기를 하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/head">head</a></td>
+<td>상위 records를 원하는 갯수 만큼 검색 결과에 출력 합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/indexer">indexer</a></td>
+<td>설정한 컬럼의 데이터를 기반으로 indexing하는 명령어 입니다. 컬럼의 데이터가 다를 경우 같은 값이라도 index 결과가 다를 수 있습니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/iris">iris</a></td>
+<td>IRIS에 읽기를 하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/join">join</a></td>
+<td>이 명령어는 다른 데이터 모델과 join을 할 때 사용됩니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/kmeans">kmeans</a></td>
+<td>kmeans를 진행하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/metatron">metatron</a></td>
+<td>metatron에 쓰기를 하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/mlmodel">mlmodel</a></td>
+<td>Data-Discovery-Service ML 관련 명령어 이며, ML 명령어 중 fit 명령어를 통해 생성되는 모델 및 메타데이터를 관리하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/model">model</a></td>
+<td>모델에 해당하는 데이터 소스의 데이터를 로드합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/model-stats">model-stats</a></td>
+<td>지정된 필드에 대한 distinct count 값을 제공합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/model-statsdetails">model-statsdetails</a></td>
+<td>지정된 필드에 존재하는 값들의 상위 빈도 10개 값을 제공합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/model-timeline">model-timeline</a></td>
+<td>지정된 데이터 모델의 Timeline을 생성합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/modeldata">modeldata</a></td>
+<td>이 명령어는 Data-Discovery-Service ML 관련 명령어 이며, 사용자가 입력한 한 데이터를 데이터 프레임으로 반환 합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/outlier">outlier</a></td>
+<td>여러 그룹을 대상으로 outlier 에 해당하는 그룹을 찾는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/pivot">pivot</a></td>
+<td>테이블을 여러 컬럼들을 축으로 회전 및 각종 통계 정보를 행과 열 별로 구할 수 있습니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/predict">predict</a></td>
+<td>이 명령어는 Data-Discovery-Service ML 관련 명령어 이며, 사전에 학습되어 있는 ML 모델을 불러와 넘겨받은 데이터에 적용하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/pylambda">pylambda</a></td>
+<td>해당 명령어는 Python의 lambda 함수를 실행 합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/rename">rename</a></td>
+<td>이 명령어는 특정한 field를 다른 명칭으로 이름을 바꾸고자 할 때 사용됩니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/round">round</a></td>
+<td>이 명령어는 지정된 실수형 필드의 소수점을 반올림 하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/sampling">sampling</a></td>
+<td>이 명령어는 Data-Discovery-Service ML 관련 명령어 이며, 사용자가 입력한 수 만큼의 데이터를 반환합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/scaler">scaler</a></td>
+<td>scaling을 진행하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/search">search</a></td>
+<td>이 명령어는 전문 검색(full-text search)을 하는데 사용 됩니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/sort">sort</a></td>
+<td>이 명령어는 검색 결과를 지정된 필드를 기준으로 정렬합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/sql">sql</a></td>
+<td>SQL 형태의 질의를 합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/stats">stats</a></td>
+<td>각종 통계 데이터를 구하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/substr">substr</a></td>
+<td>이 명령어는 특정한 필드나 문자열을 SUBSTRING 하고자 할 때 사용됩니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/timeline">timeline</a></td>
+<td>시간 범위에 따라 group by된 카운트의 숫자를 출력 합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/tokenizer">tokenizer</a></td>
+<td>지정한 필드에 대해 tokenizer를 진행하는 명령어 입니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/top">top</a></td>
+<td>이 명령어는 검색 결과를 지정된 필드를 기준으로 정렬 후 상위 값을 출력합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/union">union</a></td>
+<td>이 명령어는 다른 데이터 모델과 union 을 할 때 사용됩니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/weekend">weekend</a></td>
+<td>이 명령어는 주말/주중 데이터를 필터링하는데 사용합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="commands/where">where</a></td>
+<td>데이터를 일정 조건에 따라 filter 합니다.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="commands/ysort">ysort</a></td>
+<td>이 명령어는 검색 결과로 생성된 필드의 순서를 지정된 기준으로 정렬합니다.</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="commands/ade.html">ade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ade.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ade.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ade.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ade.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ade.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/adv.html">adv</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/adv.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/adv.html#id2">설명</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands/adv.html#operation-keyword">operation keyword</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands/adv.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/adv.html#parameters">Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands/adv.html#line-bar-pie-heatmap">LINE | BAR | PIE | HEATMAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/adv.html#histogram">HISTOGRAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/adv.html#sankey">SANKEY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/adv.html#motion-scatter-summary-outlier">MOTION | SCATTER | SUMMARY | OUTLIER</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands/adv.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/anomalies.html">anomalies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/anomalies.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/anomalies.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/anomalies.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/anomalies.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/anomalies.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/bimatrix.html">bimatrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/bimatrix.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/bimatrix.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/bimatrix.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/bimatrix.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/bimatrix.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/correlation.html">correlation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/correlation.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/correlation.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/correlation.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/correlation.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/correlation.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/count.html">count</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/count.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/count.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/count.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/count.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/count.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/fields.html">fields</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/fields.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fields.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fields.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fields.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fields.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/fillna.html">fillna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/fillna.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fillna.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fillna.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fillna.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fillna.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/fit.html">fit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit.html#id2">설명</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands/fit.html#algorithms">Algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit.html#parameters-bnf">Parameters BNF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit.html#issue">추가 개발 사항(Issue)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit.html#id7">추가 개발 방향</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/fit_predict.html">fit_predict</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit_predict.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit_predict.html#id2">설명</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands/fit_predict.html#algorithms">Algorithms</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit_predict.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit_predict.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/fit_predict.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/forecasts.html">forecasts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/forecasts.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/forecasts.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/forecasts.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/forecasts.html#parameters">Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands/forecasts.html#alg-linear">Alg = linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/forecasts.html#alg-seasonal">Alg = seasonal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands/forecasts.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/geoip.html">geoip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/geoip.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geoip.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geoip.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geoip.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geoip.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/geomap.html">geomap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/geomap.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geomap.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geomap.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geomap.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geomap.html#parameters-bnf">Parameters BNF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geomap.html#api-request-response">API Request &amp; Response</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/geostats.html">geostats</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/geostats.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geostats.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geostats.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geostats.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/geostats.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/hdfs.html">hdfs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/hdfs.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/hdfs.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/hdfs.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/hdfs.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/hdfs.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/head.html">head</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/head.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/head.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/head.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/head.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/head.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/indexer.html">indexer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/indexer.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/indexer.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/indexer.html#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands/indexer.html#species-label-stringindexer">species(label) 필드를 stringindexer()를 사용한 예</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#fit-transform">fit_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#fit">fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#transform">transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#invert">invert</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="commands/indexer.html#species-label-indexer">species(label) 필드를 indexer를 사용해 직접 변환한 예</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#id3">fit_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#id4">fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#id5">transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="commands/indexer.html#id6">invert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands/indexer.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/indexer.html#parameters-bnf">Parameters BNF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/indexer.html#id7">추가 개발사항</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/iris.html">iris</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/iris.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/iris.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/iris.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/iris.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/iris.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/join.html">join</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/join.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/join.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/join.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/join.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/join.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/kmeans.html">kmeans</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/kmeans.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/kmeans.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/kmeans.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/kmeans.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/kmeans.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/metatron.html">metatron</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/metatron.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/metatron.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/metatron.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/metatron.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/metatron.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html">RandomForest Classification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html">RandomForest Regression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html">Spark DecisionTree Classification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html">Spark DecisionTree Regression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html">Spark FP-Growth</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html">Spark Kmeans</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html">generalizedLinearRegression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#parameters-bnf">Parameters BNF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#problems">Problems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/linearregression.html">linearRegression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html">logisticRegression(LBFGS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/mlmodel.html">mlmodel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/mlmodel.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/mlmodel.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/mlmodel.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/mlmodel.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/mlmodel.html#parameters-bnf">Parameters BNF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/mlmodel.html#api-request-response">API Request &amp; Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/mlmodel.html#problem">Problem</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/model.html">model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/model.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/model-stats.html">model-stats</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-stats.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-stats.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-stats.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-stats.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-stats.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/model-statsdetails.html">model-statsdetails</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-statsdetails.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-statsdetails.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-statsdetails.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-statsdetails.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-statsdetails.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/model-timeline.html">model-timeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-timeline.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-timeline.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-timeline.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-timeline.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/model-timeline.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/modeldata.html">modeldata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/modeldata.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/modeldata.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/modeldata.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/modeldata.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/modeldata.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/outlier.html">outliers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/outlier.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/outlier.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/outlier.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/outlier.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/outlier.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/pivot.html">pivot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/pivot.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pivot.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pivot.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pivot.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pivot.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/predict.html">predict</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/predict.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/predict.html#id2">설명</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands/predict.html#algorithms">Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html">RandomForest Classification</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestClassification.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html">RandomForest Regression</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/RandomForestRegression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html">Spark DecisionTree Classification</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeClassification.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html">Spark DecisionTree Regression</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkDecisionTreeRegression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html">Spark FP-Growth</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkFPGrowth.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html">Spark Kmeans</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/SparkKmeans.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html">generalizedLinearRegression</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#parameters-bnf">Parameters BNF</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/generalizedlinearregression.html#problems">Problems</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/linearregression.html">linearRegression</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#example">Example</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/linearregression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html">logisticRegression(LBFGS)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#id1">개요</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#id2">설명</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="commands/ml_algorithms/logisticregression.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands/predict.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/predict.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/predict.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/pylambda.html">pylambda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/pylambda.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pylambda.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pylambda.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pylambda.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/pylambda.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/rename.html">rename</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/rename.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/rename.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/rename.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/rename.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/rename.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/round.html">round</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/round.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/round.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/round.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/round.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/round.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/sampling.html">sampling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/sampling.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sampling.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sampling.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sampling.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sampling.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/scaler.html">scaler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/scaler.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/scaler.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/scaler.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/scaler.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/scaler.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/search.html">search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/search.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/search.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/search.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/search.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/search.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/sort.html">sort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/sort.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sort.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sort.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sort.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sort.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/sql.html">sql</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/sql.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sql.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sql.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sql.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/sql.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/stats.html">stats</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/stats.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/stats.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/stats.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/stats.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/stats.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/substr.html">substr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/substr.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/substr.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/substr.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/substr.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/substr.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/timeline.html">timeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/timeline.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/timeline.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/timeline.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/timeline.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/timeline.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/tokenizer.html">tokenizer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/tokenizer.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/tokenizer.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/tokenizer.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/tokenizer.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/tokenizer.html#parameters-bnf">Parameters BNF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/tokenizer.html#id3">개발사항</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/top.html">top</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/top.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/top.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/top.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/top.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/top.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/union.html">union</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/union.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/union.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/union.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/union.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/union.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/weekend.html">weekend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/weekend.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/weekend.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/weekend.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/weekend.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/weekend.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/where.html">where</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/where.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/where.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/where.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/where.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/where.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands/ysort.html">ysort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/ysort.html#id1">개요</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ysort.html#id2">설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ysort.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ysort.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands/ysort.html#parameters-bnf">Parameters BNF</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="commands/ade.html" class="btn btn-neutral float-right" title="ade" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../architecture/index.html" class="btn btn-neutral" title="Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, team IRIS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/myscript.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+	<header>
+	<div class="header__container">
+		<div class="search__icon">
+			<i class="fa fa-search"></i>
+		</div>
+		<a href="/" class="header__logo">
+			<img width="52" src="/assets/img/logo/iris-logo.svg">
+			<span class="header__logo-text">Documentation</span>
+		</a>
+		<div class="links__icon">
+			<i class="fa fa-bars"></i>
+		</div>
+		<ul class="header__links">
+			<li><a href="#products">제품</a></li>
+			<li><a href="#blog">블로그</a></li>
+			<li><a href="#company">회사</a></li>
+		</ul>
+		<div class="header__searchbar">
+			<form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+                <input type="text" name="q" placeholder="Search by keyword" autofocus />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+		</div>
+	</div>
+</header>
+	<script type="text/javascript">
+		/* Temporary fix for the search capability. Fix has been committed to the theme's master;
+		   however, waiting a new release to the theme.  This fix should remain in place until that
+		   time.  sphinx_rtd_theme is current v0.1.10a0. Commit for the fix in the
+		   theme can be found at: https://github.com/snide/sphinx_rtd_theme/commit/a5e0e304
+		 */
+        if(DOCUMENTATION_OPTIONS) {
+			DOCUMENTATION_OPTIONS.SOURCELINK_SUFFIX = '.txt'
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>버튼 기능 &mdash; IRIS 2.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+	<!-- Bizible Script -->
+	<!--script src="//cdn.bizible.com/scripts/bizible.js" async=""></script-->
+
+        <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48995315-4"></script>
+<script>
+    var host = window.location.hostname;
+    if(host != "localhost" && host != "127.0.0.1")
+    {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48995315-4');
+    }
+</script>
+        <!-- End Google Analytics -->
+
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> IRIS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Usecase/index.html">Usecase</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">IRIS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+    
+    <li>버튼 기능</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          d
+          <a href="../../../_sources/IRIS-Manual/IRIS-WEB/hdfs_browser/button.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>버튼 기능<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>아래와 같이 버튼 기능이 제공됩니다. 일부 기능은 현재 경로나 선택한 파일/폴더의 읽기 혹은 쓰기 권한을 필요로 합니다. 권한이 없다면 해당 기능을 사용할 수 없습니다.</p>
+<img alt="../../../_images/buttons.png" src="../../../_images/buttons.png" />
+<div class="section" id="id2">
+<h2>새로 고침<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>새로 고침 버튼을 클릭하면 현재 파일 경로 기준으로 파일 목록을 갱신합니다.</p>
+</div>
+<div class="section" id="id3">
+<h2>이름 변경<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>파일 혹은 폴더를 선택 후 이름 변경 버튼을 클릭하면 아래와 같이 팝업이 열립니다. 기존의 이름을 원하는 이름으로 수정 후 변경 버튼을 클릭하면 파일명이 변경됩니다.</p>
+<img alt="../../../_images/hdfs-browser-rename.png" src="../../../_images/hdfs-browser-rename.png" />
+</div>
+<div class="section" id="id4">
+<h2>새 폴더 생성<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>새폴더 버튼을 클릭하면 아래과 같이 팝업이 열립니다. 폴더명을 입력 후 생성 버튼을 클릭하면 현재 경로에 폴더가 생성됩니다.</p>
+<img alt="../../../_images/hdfs-browser-new-folder.png" src="../../../_images/hdfs-browser-new-folder.png" />
+</div>
+<div class="section" id="id5">
+<h2>파일 삭제<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>파일 혹은 폴더를 선택 후 삭제 버튼을 클릭하면 아래과 같이 팝업이 열립니다. 확인 버튼을 클릭하면 선택한 파일이 삭제됩니다. 폴더를 삭제할 경우 하위 경로의 모든 파일 및 폴더가 삭제되므로 주의해야 합니다.</p>
+<img alt="../../../_images/hdfs-browser-remove.png" src="../../../_images/hdfs-browser-remove.png" />
+</div>
+<div class="section" id="id6">
+<h2>링크 복사<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>파일을 선택 후 링크 복사 버튼을 클릭하면 아래와 같이 팝업이 열리고 해당 파일을 다운로드할 수 있는 주소가 클립보드에 복사됩니다.</p>
+<img alt="../../../_images/hdfs-browser-copy-link.png" src="../../../_images/hdfs-browser-copy-link.png" />
+</div>
+<div class="section" id="id7">
+<h2>업로드<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>업로드 버튼을 클릭하면 아래과 같이 파일 업로드 다이얼로그가 열립니다.</p>
+<img alt="../../../_images/hdfs-browser-upload1.png" src="../../../_images/hdfs-browser-upload1.png" />
+<p>이 다이얼로그에서 파일 선택 버튼을 클릭하면 로컬 PC의 파일을 선택할 수 있고, 파일을 선택하면 아래와 같이 업로드가 진행됩니다.</p>
+<img alt="../../../_images/hdfs-browser-upload3.png" src="../../../_images/hdfs-browser-upload3.png" />
+</div>
+<div class="section" id="id8">
+<h2>다운로드<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>파일을 선택 후 다운로드 버튼을 클릭하면 아래와 같이 팝업이 열리고, 다운로드 버튼을 클릭하면 파일을 다운로드됩니다.</p>
+<img alt="../../../_images/hdfs-browser-download.png" src="../../../_images/hdfs-browser-download.png" />
+</div>
+<div class="section" id="id9">
+<h2>파일 전달<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Mount 브라우징 상태에서만 사용할 수 있는 버튼 기능입니다. 선택한 특정 파일을 다른 사용자에게 전달할 수 있습니다.</p>
+<img alt="../../../_images/mount-browser-forward-file1.png" src="../../../_images/mount-browser-forward-file1.png" />
+<p>파일을 선택 후 파일 전달 버튼을 클릭하면 아래와 같이 팝업이 열립니다.
+사용자/그룹 탭을 전환하면서 파일을 전달받을 사용자 혹은 그룹을 선택합니다.</p>
+<img alt="../../../_images/mount-browser-forward-file2.png" src="../../../_images/mount-browser-forward-file2.png" />
+<p>파일 전달이 성공적으로 수행되면 아래와 같은 메시지가 출력됩니다.</p>
+<img alt="../../../_images/mount-browser-forward-file4.png" src="../../../_images/mount-browser-forward-file4.png" />
+<p>전달한 파일은 선택한 사용자 또는 선택한 그룹의 모든 사용자의 shared 폴더 안에 복사됩니다.
+복사된 파일의 이름은 전달자 아이디, 수행 시간, 원본 파일명을 조합한 문자열로 설정됩니다.</p>
+<img alt="../../../_images/mount-browser-forward-file5.png" src="../../../_images/mount-browser-forward-file5.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, team IRIS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/myscript.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+	<header>
+	<div class="header__container">
+		<div class="search__icon">
+			<i class="fa fa-search"></i>
+		</div>
+		<a href="/" class="header__logo">
+			<img width="52" src="/assets/img/logo/iris-logo.svg">
+			<span class="header__logo-text">Documentation</span>
+		</a>
+		<div class="links__icon">
+			<i class="fa fa-bars"></i>
+		</div>
+		<ul class="header__links">
+			<li><a href="#products">제품</a></li>
+			<li><a href="#blog">블로그</a></li>
+			<li><a href="#company">회사</a></li>
+		</ul>
+		<div class="header__searchbar">
+			<form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+                <input type="text" name="q" placeholder="Search by keyword" autofocus />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+		</div>
+	</div>
+</header>
+	<script type="text/javascript">
+		/* Temporary fix for the search capability. Fix has been committed to the theme's master;
+		   however, waiting a new release to the theme.  This fix should remain in place until that
+		   time.  sphinx_rtd_theme is current v0.1.10a0. Commit for the fix in the
+		   theme can be found at: https://github.com/snide/sphinx_rtd_theme/commit/a5e0e304
+		 */
+        if(DOCUMENTATION_OPTIONS) {
+			DOCUMENTATION_OPTIONS.SOURCELINK_SUFFIX = '.txt'
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+@import 'font';
+
+// Variables
+
+// Base
+$on-mobile: 576px !default;
+$on-tablet: 768px !default;
+$on-desktop: 992px !default;
+// colors
+$brand-color: #1e88e5 !default;
+$text-color: #4C555A !default;
+$gray-color: #E6E6E6 !default;
+$zebra-color: #ECEFF1 !default;
+// fonts
+// $base-font-family: -apple-system, BlinkMacSystemFont, 'Spoqa-han-sans', 'Segoe UI', 'Open Sans', 'Helvetica Neue' !default;
+// $code-font-family: Consolas, Menlo, Monaco, 'DejaVu Sans Mono', 'Lucida Console', monospace !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+$css--typography: true !default;
+
+//-------------------------------------------
+//  Spacing
+// ------------------------------------------
+//
+//   Size in px based on 16px base
+//
+//   Spacing Scale
+//   ==========================================
+//   3xs  ||  2px
+//   2xs  ||  4px
+//   xs   ||  8px
+//   sm   ||  12px
+//   md   ||  16px
+//   lg   ||  24px
+//   xl   ||  32px
+//   2xl  ||  40px
+//   3xl  ||  48px
+//   ==========================================
+//
+//   Layout Scale
+//   ==========================================
+//   2xs  ||  16px
+//   xs   ||  24px
+//   sm   ||  32px
+//   md   ||  48px
+//   lg   ||  64px
+//   xl   ||  96px
+//   2xl  ||  160px
+//   ==========================================
+
+$spacing-baseline: 1rem !default;
+
+$spacing-3xs: $spacing-baseline * 0.125 !default;
+$spacing-2xs: $spacing-baseline * 0.25 !default;
+$spacing-xs: $spacing-baseline * 0.5 !default;
+$spacing-sm: $spacing-baseline * 0.75 !default;
+$spacing-md: $spacing-baseline !default;
+$spacing-lg: $spacing-baseline * 1.5 !default;
+$spacing-xl: $spacing-baseline * 2 !default;
+$spacing-2xl: $spacing-baseline * 2.5 !default;
+$spacing-3xl: $spacing-baseline * 3 !default;
+
+$layout-2xs: $spacing-baseline !default;
+$layout-xs: $spacing-baseline * 1.5 !default;
+$layout-sm: $spacing-baseline * 2 !default;
+$layout-md: $spacing-baseline * 3 !default;
+$layout-lg: $spacing-baseline * 4 !default;
+$layout-xl: $spacing-baseline * 6 !default;
+$layout-2xl: $spacing-baseline * 10 !default;
+
+// margin and padding
+$base-mobile-padding: 15px !default;
+$base-tablet-padding: 5% !default;
+$base-desktop-padding: $base-tablet-padding * 2 !default;
+
+// Header.html
+$header-height: 60px !default;
+$header-background-color: #FFFFFF !default;
+$header-border-color: $brand-color !default;
+$header-border-width: 2px !default;
+$header-shadow-color: rgba(0, 0, 0, 0.16) !default;
+$header-shadow-width: 4px !default;
+$header-logo-height: 32px !default;
+$header-logo-width: 126px !default;
+// navigation
+$navigation-margin: 20px !default;
+// hamburger
+$hamburger-button-size: 48px !default;
+$hamburger-menu-width: 280px !default;
+$hamburger-element-margin: 20px !default;
+// search box
+$search-box-height: $header-logo-height !default;
+$search-box-width: 200px !default;
+$search-expanded-width: 220px !default;
+
+// Home.html
+$home-section-padding: 30px !default;
+$home-text-margin: 20px !default;
+$company-gallery-height: 60px !default;
+$home-landing-padding: 120px !default;
+
+// Footer.html
+$footer-padding: 40px !default;
+$footer-font-color: #CCCCCC !default;
+$social-icon-size: 32px !default;
+$footer-avatar-size: 60px !default;
+
+// Page.html and Post.html
+$post-bottom-margin: 50px !default;
+$header-bottom-margin: 30px !default;
+
+// Blog.html
+$blog-margin: 50px !default;
+$blog-list-margin: 40px !default;
+
+// Code
+$syntax-background-color: #f2f2f2 !default;
+
+// Search
+$search-bottom-margin: 50px !default;
+
+// Documentation.html
+$doc-mobile-padding: $layout-xs !default;
+$doc-tablet-padding: $layout-lg !default;
+$doc-desktop-padding: $layout-lg !default;
+$doc-menu-width: 260px !default;
+$documentation-margin: 40px !default;
+
+// Imports
+@import 'mixins/mixins';
+@import 'mixins/import-once';
+@import 'config/typography';
+@import 'config/css--typography';
+@import 'includes/header';
+@import 'includes/footer';
+@import 'includes/code';
+@import 'layouts/default';
+@import 'layouts/home';
+//@import 'layouts/post';
+//@import 'layouts/blog';
+//@import 'layouts/search';
+@import 'layouts/documentation';
+//@import 'layouts/page-not-found';
+//@import 'layouts/hackfest.scss';

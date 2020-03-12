@@ -1,0 +1,52 @@
+{% assign docs_by_category = site.documentation | group_by: "category" %}
+<footer class="footer" role="contentinfo" aria-label="Site footer">
+    <div class="navigation" role="navigation" aria-label="Footer links">
+        <a href="{{ site.url }}" class="avatar" role="link" aria-label="{{ site.github.repository_name }}"></a>
+        <ul role="menubar" aria-label="Footer links menubar">
+            <li class="footer-products" role="menuitem" aria-label="Products">
+                Products
+                <ul role="menu" aria-hidden="true" aria-label="Products link">
+                    <li role="listitem" aria-label="Products link item"><a href="{{ '/documentation/products/beyond-iris' | relative_url }}" role="link" aria-label="Beyond IRIS">Beyond IRIS</a></li>
+                    <li role="listitem" aria-label="Products link item"><a href="{{ '/documentation/products/iris-database' | relative_url }}" role="link" aria-label="IRIS Database">IRIS Database</a></li>
+                    <li role="listitem" aria-label="Products link item"><a href="{{ '/documentation/products/monitoring' | relative_url }}" role="link" aria-label="Monitoring">Monitoring</a></li>
+                    <li role="listitem" aria-label="Products link item"><a href="{{ '/documentation/products/alerting' | relative_url }}" role="link" aria-label="Alerting">Alerting</a></li>
+                </ul>
+            </li>
+            <li class="footer-solutions" role="menuitem" aria-label="Solutions">
+                Solutions 
+                <ul role="menu" aria-hidden="true" aria-label="Solutions link">
+                    <li role="listitem" aria-label="Products link item"><a href="{{ '/documentation/solutions/log-analytics' | relative_url }}" role="link" aria-label="Log Analytics">Log Analytics</a></li>
+                    <li role="listitem" aria-label="Products link item"><a href="{{ '/documentation/solutions/system-monitoring' | relative_url }}" role="link" aria-label="System Monitoring Solution">System Monitoring</a></li>
+                </ul>
+            </li>
+            <li class="footer-resources" role="menuitem" aria-label="Resources">
+                Rosources
+                <ul role="menu" aria-hidden="true" aria-label="Resources link">
+                    <li role="listitem" aria-label="Resources link item"><a href="{{ '/documentation/downloads/brochure' | relative_url }}" role="link" aria-label="Samples">Brochure</a></li>
+                </ul>
+                <ul role="menu" aria-hidden="true" aria-label="Resources link">
+                    <li role="listitem" aria-label="Resources link item"><a href="{{ '/documentation/manual/index' | relative_url }}" role="link" aria-label="Samples">Manual</a></li>
+                </ul>
+                <ul role="menu" aria-hidden="true" aria-label="Resources link">
+                    <li role="listitem" aria-label="Resources link item"><a href="{{ '/documentation/tutorials/index' | relative_url }}" role="link" aria-label="Samples">Tutorials</a></li>
+                </ul>
+                <ul role="menu" aria-hidden="true" aria-label="Resources link">
+                    <li role="listitem" aria-label="Resources link item"><a href="{{ '/documentation/showcases/index' | relative_url }}" role="link" aria-label="Samples">Showcases</a></li>
+                </ul>
+            </li>
+            <li class="footer-organization" role="menuitem" aria-label="Organization">
+                Organization
+                <ul role="menu" aria-hidden="true" aria-label="Organization link">
+                    <li role="listitem" aria-label="Organization link item"><a href=http://mobigen.com role="link" aria-label="About Mobigen">About Mobigen</a></li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+    <div class="copyright" role="contentinfo" aria-label="Copyright">
+        <p><a href="http://mobigen.com">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Mobigen</a></p>
+        <div class="right">
+            <a href="{{ '/sitemap.xml' | relative_url }}" target="_blank" role="link" aria-label="Site map">Site Map</a>
+        </div>
+    </div>
+</footer>

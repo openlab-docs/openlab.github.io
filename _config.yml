@@ -1,0 +1,82 @@
+title: IRIS 
+
+description: > # this means to ignore newlines until "baseurl:"
+  쉽고 편리한 빅데이터 분석을 지원합니다.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://guhyn.github"
+author: guhyn
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# theme: minima
+# End
+
+
+exclude:
+  - manual_srouce
+
+include:
+  - _static
+  - _images
+  - _sources
+
+
+# Gem settings
+#gems:
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+
+# End
+
+#github: mobigen/mobigen.github.io
+github: [metadata]
+
+# jekyll-seo-tag settings
+#End
+
+# Date format settings
+date_format: "%b %-d, %Y"
+# End
+
+# Site permalink settings
+permalink: /:title/
+# End
+
+# Collections settings
+collections:
+  documentation:
+    output: true
+    permalink: /:collection/:path
+# End
+
+# Site menu settings
+menu:
+  - title: 제품
+    url: ""
+  - title: 블로그
+    url: ""
+  - title: 회사
+    url: ""
+#  - title: "Contact"
+#    url: "/contact"
+# End
+
+category_order:
+  - 'Products' 
+  - 'Solutions' 
+  - 'Manual' 
+  - 'Tutorials'
+  - 'Showcases'
+  - 'Download' 

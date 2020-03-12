@@ -1,0 +1,300 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>대시보드 &mdash; IRIS 2.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+	<!-- Bizible Script -->
+	<!--script src="//cdn.bizible.com/scripts/bizible.js" async=""></script-->
+
+        <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48995315-4"></script>
+<script>
+    var host = window.location.hostname;
+    if(host != "localhost" && host != "127.0.0.1")
+    {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48995315-4');
+    }
+</script>
+        <!-- End Google Analytics -->
+
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> IRIS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IRIS-Usecase/index.html">Usecase</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">IRIS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+    
+    <li>대시보드</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          d
+          <a href="../../../_sources/IRIS-Manual/IRIS-WEB/cluster_management/dashboard.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id2">
+<h1><span class="target" id="id1">대시보드</span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>대시보드는 IRIS의 데이터 노드별 CPU, 메모리, 디스크, 네트워크의 상태를 확인할 수 있고, 사용자가 장애 레벨 임계 치를 설정해 장애의 현황을 실시간으로 확인할 수 있습니다. 또한 IRIS 에서 발생하는 장애 알림 중 3가지(치명, 에러, 경고) 유형을 확인할 수 있습니다. 세션 정보는 분 단위로 세션이 발생하는 개수를 그래프로 확인할 수도 있고 현재 실행되고 있는 세션 개수도 확인할 수 있습니다. 테이블 스페이스 현황에서는 전체 디스크 용량 대비 테이블별 용량의 비중을 그래프로 확인할 수 있습니다. 테이블 스페이스는 시간당 로딩되는 용량을 확인할 수 있습니다.</p>
+<img alt="../../../_images/dashboard.png" src="../../../_images/dashboard.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="15%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>번호</td>
+<td>구분</td>
+<td>설명</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>노드 상태</td>
+<td>데이터 노드별 리소스를 임계치 설정에 따라 확인할 수 있으며, 노드 상태 부분을 클릭하면 시스템에 리소스 사용률(이력조회) 페이지로 전환 됩니다.</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>자동 넘김 ON/OFF 및 설정</td>
+<td>자동 넘김은 대시보드에서 자동으로 노드의 탭이 넘어가는 부분을 설정할 수 있으며, 설정 버튼을 클릭하면 장애 레벨 임계치 설정 팝업을 열 수 있습니다.</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>알림 현황</td>
+<td>IRIS-DB의 장애 정보를 확인할 수 있으며, 알림 현황 부분을 클릭하면 시스템에 장애 정보 조회 페이지로 전환 됩니다.</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>세션 현황</td>
+<td>IRIS의 현재 세션 수와 실행된 세션 수를 분 단위 그래프로 확인할 수 있으며, 세션 현황 부분을 클릭하면 DB에 세션 관리 페이지로 전환 됩니다.</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>테이블 스페이스 현황</td>
+<td>전체 디스크 대비 테이블별 용량을 확인할 수 있으며, 테이블 스페이스 현황 부분을 클릭하면 DB에 테이블 스페이스(사용률 현황) 페이지로 전환됩니다.</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>메모리/디스크 크기, 블록 개수</td>
+<td>램 디스크와 디스크의 블록 및 개수를 설정할 수 있습니다.</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>테이블 스페이스</td>
+<td>IRIS에 데이터가 로딩될 때 전체 테이블의 로딩되는 용량을 시간 단위 그래프로 확인할 수 있으며 테이블 스페이스 부분을 클릭하면 DB에 테이블 스페이스(사용률 조회) 페이지로 전환 됩니다.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id4">
+<h2><span class="target" id="id3">장애 레벨 임계치 설정</span><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>장애 레벨 임계치 설정은 CPU, 메모리, 디스크에 대한 알림, 경고, 주요, 위험 4단계를 각각 퍼센트(%) 별로 설정 할 수 있으며, 설정 정보 기준으로 대시보드 노드 상태 부분이 CPU, 메모리, 디스크 임계치 중 가장 높은 것을 기준으로 색이 변합니다.</p>
+<img alt="../../../_images/threshold.png" src="../../../_images/threshold.png" />
+<p>예를 들어 위 설정의 기준으로 현재 노드의 CPU 30%, 메모리 60%, 디스크 50%라 가정 했을 때 CPU는 경고 영역, 메모리는 주요 영역, 디스크는 경고 영역 이므로 장애 레벨이 3개중 가장 높은 것이 주요 영역(메모리)이므로 해당 노드는 노드 상태 부분에서 주황색으로 표시됩니다.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, team IRIS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/myscript.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+	<header>
+	<div class="header__container">
+		<div class="search__icon">
+			<i class="fa fa-search"></i>
+		</div>
+		<a href="/" class="header__logo">
+			<img width="52" src="/assets/img/logo/iris-logo.svg">
+			<span class="header__logo-text">Documentation</span>
+		</a>
+		<div class="links__icon">
+			<i class="fa fa-bars"></i>
+		</div>
+		<ul class="header__links">
+			<li><a href="#products">제품</a></li>
+			<li><a href="#blog">블로그</a></li>
+			<li><a href="#company">회사</a></li>
+		</ul>
+		<div class="header__searchbar">
+			<form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+                <input type="text" name="q" placeholder="Search by keyword" autofocus />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+		</div>
+	</div>
+</header>
+	<script type="text/javascript">
+		/* Temporary fix for the search capability. Fix has been committed to the theme's master;
+		   however, waiting a new release to the theme.  This fix should remain in place until that
+		   time.  sphinx_rtd_theme is current v0.1.10a0. Commit for the fix in the
+		   theme can be found at: https://github.com/snide/sphinx_rtd_theme/commit/a5e0e304
+		 */
+        if(DOCUMENTATION_OPTIONS) {
+			DOCUMENTATION_OPTIONS.SOURCELINK_SUFFIX = '.txt'
+        }
+    </script>
+
+
+</body>
+</html>
