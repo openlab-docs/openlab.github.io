@@ -14,4 +14,4 @@ OpenLab를 활용하여 데이터를 빠르게 탐색하거나 시각화하여 �
     visualization/index.rst
     ad/index.rst
     template/index.rst
-	data_model/index.rst
+    data_model/index.rst
